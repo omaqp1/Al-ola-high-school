@@ -1,0 +1,563 @@
+/* style.css */
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+:root {
+    --primary: #00f7ff;
+    --secondary: #ff69b4;
+    --accent: #2ecc71;/* Designed and developed by the student Omar Mahlous */
+    --dark: #0a192f;/* Designed and developed by the student Omar Mahlous */
+    --light: #f8f9fa;
+    --footer-bg: #08111f;
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --section-padding: 8rem 0;
+    --header-height: 80px;
+    --nav-width: 300px;
+    --shadow: 0 10px 30px rgba(0, 247, 255, 0.1);/* Designed and developed by the student Omar Mahlous */
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس *//* Designed and developed by the student Omar Mahlous */
+*,
+*::before,
+*::after {/* Designed and developed by the student Omar Mahlous */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+/* لغة التبديل */
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.language-switcher {
+    position: relative;/* Designed and developed by the student Omar Mahlous */
+    margin-left: 20px;
+}
+
+.lang-trigger {
+    background: rgba(0, 247, 255, 0.1);
+    border: 1px solid var(--primary);
+    color: var(--light);/* Designed and developed by the student Omar Mahlous */
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;/* Designed and developed by the student Omar Mahlous */
+    transition: var(--transition);
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.lang-trigger:hover {
+    background: rgba(0, 247, 255, 0.2);
+}
+
+.lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(10, 25, 47, 0.98);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 180px;
+    backdrop-filter: blur(15px);
+    display: none;/* Designed and developed by the student Omar Mahlous */
+    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.1);
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.lang-menu.active {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;/* Designed and developed by the student Omar Mahlous */
+        transform: translateY(0);
+    }
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    color: var(--light);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.lang-item:hover {
+    background: rgba(0, 247, 255, 0.1);
+    transform: translateX(5px);
+}
+/* Designed and developed by the student Omar Mahlous */
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.lang-item img {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.lang-item.active {
+    background: rgba(0, 247, 255, 0.15);
+    pointer-events: none;
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.hero-section {
+    min-height: calc(100vh - var(--header-height)); /* تعديل هنا *//* Designed and developed by the student Omar Mahlous */
+    padding-top: var(--header-height);
+    margin-top: -60em; /* تعديل هنا لإزالة الفراغ تحت الهيدر */
+
+    @media (max-width: 992px) {
+        margin-top: -60em; /* تعديل هنا للشاشات المتوسطة */
+    }
+
+    @media (max-width: 768px) {
+        margin-top: -80em; /* تعديل هنا للشاشات الصغيرة */
+    }
+
+    @media (max-width: 480px) {
+        margin-top: -55em; /* تعديل هنا للشاشات الصغيرة جدًا */
+    }
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+}
+body {
+    font-family: 'Tajawal', system-ui, sans-serif;
+    background: var(--dark);
+    color: var(--light);
+    line-height: 1.7;
+    overflow-x: hidden;
+    font-size: 1.6rem;
+}
+.main.main-nav__link/* Designed and developed by the student Omar Mahlous *//* Designed and developed by the student Omar Mahlous */
+{
+    font-size: 2rem;
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.cyber-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    padding: 0 4rem;
+    background: rgba(10, 25, 47, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;/* Designed and developed by the student Omar Mahlous */
+    border-bottom: 2px solid var(--primary);
+    box-shadow: var(--shadow);
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.header-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.logo {/* Designed and developed by the student Omar Mahlous */
+    width: 7rem;
+    transition: var(--transition);
+    filter: drop-shadow(0 0 1rem var(--primary));
+}
+
+.logo:hover {
+    transform: rotate(-8deg) scale(1.1);
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.main-nav {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: var(--nav-width);
+    height: calc(100vh - var(--header-height));
+    background: rgba(10, 25, 47, 0.98);
+    backdrop-filter: blur(20px);/* Designed and developed by the student Omar Mahlous */
+    -webkit-backdrop-filter: blur(20px);
+    padding: 3rem;
+    transition: right 0.4s var(--transition);
+    z-index: 999;
+    overflow-y: auto;
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.main-nav.active {
+    right: 0;
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.main-nav__list {
+    list-style: none;/* Designed and developed by the student Omar Mahlous *//* Designed and developed by the student Omar Mahlous */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.main-nav__link {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;/* Designed and developed by the student Omar Mahlous */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: var(--transition);/* Designed and developed by the student Omar Mahlous */
+    position: relative;
+}/* Designed and developed by the student Omar Mahlous */
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.main-nav__link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;/* Designed and developed by the student Omar Mahlous */
+    width: 0;/* Designed and developed by the student Omar Mahlous */
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 1rem;
+    z-index: -1;
+    transition: width 0.4s ease;
+}
+
+.main-nav__link:hover {
+    color: var(--dark);/* Designed and developed by the student Omar Mahlous */
+    transform: translateX(-1rem);
+}/* Designed and developed by the student Omar Mahlous */
+
+.main-nav__link:hover::before {
+    width: 100%;
+}/* Designed and developed by the student Omar Mahlous */
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.scrolling-text {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scroll 10s linear infinite;
+    background: linear-gradient(135deg, #f86262, #30f8ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 5rem rgba(0, 247, 255, 0.3);
+}
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.section {
+    padding: var(--section-padding);
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-align: center;
+    margin-bottom: 6rem;
+    position: relative;
+    color: var(--primary);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8rem;
+    height: 0.4rem;
+    background: var(--gradient);
+    border-radius: 2rem;
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.program-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4rem 3rem;
+    border-radius: 2rem;
+    border: 1px solid var(--primary);
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.program-card:hover {
+    transform: translateY(-1rem) rotateX(15deg) rotateY(-5deg);
+    box-shadow: var(--shadow);
+    background: rgba(0, 247, 255, 0.1);
+}
+
+.program-icon {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.program-card:hover .program-icon {
+    transform: rotateY(180deg) scale(1.2);
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.main-footer {
+    background: var(--footer-bg);
+    padding: 6rem 0 3rem;
+    margin-top: 10rem;
+    position: relative;
+}
+
+.main-footer::before {
+    content: '';
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    right: 0;
+    height: 10rem;
+    background: var(--gradient);
+    clip-path: polygon(0 0, 100% 70%, 100% 100%, 0% 100%);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-section h4 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.footer-section ul li {
+    margin-bottom: 1.2rem;
+}
+
+.footer-section a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    font-size: 2.5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    color: var(--dark);
+    transform: translateY(-0.5rem);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.4rem;
+    opacity: 0.8;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 4rem;
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(8rem);
+    transition: var(--transition);
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+@media (max-width: 992px) {
+    .main-nav {
+        width: 100%;
+        right: -100%;
+    }
+
+    .main-nav.active {
+        right: 0;
+    }
+
+    .program-card {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 70px;
+        --section-padding: 6rem 0;
+    }
+
+    .cyber-header {/* Designed and developed by the student Omar Mahlous */
+        padding: 0 2rem;
+    }
+
+    .hero-title {
+        margin-bottom: 2rem;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Designed and developed by the student Omar Mahlous */
+@media (max-width: 480px) {
+    .logo {
+        width: 6rem;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .footer-grid {/* Designed and developed by the student Omar Mahlous */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* تصميم وإنشاء الموقع بواسطة الطالب عمر مهلوس */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important; /* Designed and developed by the student Omar Mahlous */
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;/* Designed and developed by the student Omar Mahlous */
+    }
+}
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: clamp(3.5rem, 8vw, 5rem);/* Designed and developed by the student Omar Mahlous */
+    }
+    
+    .main-nav__link {
+        font-size: 1.8rem;
+        padding: 1rem;/* Designed and developed by the student Omar Mahlous */
+    }
+    
+    .program-card {
+        padding: 2rem;/* Designed and developed by the student Omar Mahlous */
+    }
+}
+.hero-title {
+    animation: glow 2s infinite alternate ease-in-out, up_down 2s infinite alternate ease-in-out;
+}
+
+@keyframes up_down {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 1px rgba(0, 247, 255, 0.75), 0 0 6px rgba(225, 0, 255, 0.678), 0 0 9px rgba(0, 247, 255, 0.75); }
+    100% { text-shadow: 0 0 12px rgba(0, 247, 255, 0.75), 0 0 18px rgba(0, 247, 255, 0.534), 0 0 24px rgba(0, 247, 255, 0.75); }
+}
+/* Designed and developed by the student Omar Mahlous */
+/* Designed and developed by the student Omar Mahlous */
+@media (max-width: 768px) {
+    .contact-info {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .contact-list li {
+        flex-direction: column;
+        align-items: center;
+    }
+}
